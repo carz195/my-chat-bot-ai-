@@ -1,0 +1,22 @@
+# Environment
+.env
+.env.local
+
+# Dependencies
+node_modules/
+
+# Teacher-only files (never commit)
+TEACHING_GUIDE.md
+diagrams/
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+.claude/

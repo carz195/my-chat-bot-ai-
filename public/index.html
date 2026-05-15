@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+         CHANGE THE TEXT BELOW to make this app yours.
+         e.g. swap "AI Chat" for "Aviation Co-Pilot" or "Helper Bot".
+         ============================================================ -->
+    <header class="app-header">
+      <h1 class="app-title">AI Chat</h1>
+      <p class="app-subtitle">Built by a student. Powered by Gemini.</p>
+    </header>
+
+    <main class="chat" id="chat">
+      <div class="chat-messages" id="messages">
+        <div class="message message-ai">
+          <div class="message-bubble">
+            Hi! Ask me anything to get started.
+          </div>
+        </div>
+      </div>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <input
+          class="composer-input"
+          id="composer-input"
+          type="text"
+          placeholder="Type a message..."
+          required
+        />
+        <button class="composer-send" id="composer-send" type="submit">
+          Send
+        </button>
+      </form>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

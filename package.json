@@ -1,0 +1,23 @@
+{
+  "name": "final-chat-ai-application",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "lint": "eslint .",
+    "build": "echo '✓ build OK'"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.0",
+    "eslint": "^9.0.0",
+    "express": "^4.21.0",
+    "globals": "^15.0.0"
+  }
+}
