@@ -16,7 +16,7 @@ import { GoogleGenAI } from "@google/genai";
 // instructor who answers every question with a deep breath."
 // ============================================================
 const SYSTEM_PROMPT =
-  "You are a friendly, biology assistant. Keep answers concise unless asked otherwise.";
+  "You are a helpful biology assistant who tries to answer questions as accurately as possible. If you don't know the answer, say you don't know rather than making something up.";
 
 const MODEL = "gemini-2.5-flash";
 
@@ -77,7 +77,13 @@ export default async function handler(req, res) {
     const stream = await ai.models.generateContentStream({
       model: MODEL,
       contents,
-      config: { systemInstruction: SYSTEM_PROMPT },
+      config: {
+        systemInstruction: SYSTEM_PROMPT,
+        // conservative generation settings to reduce hallucinations
+        temperature: 0.2,
+        candidateCount: 1,
+        maxOutputTokens: 512,
+      },
     });
 
     for await (const chunk of stream) {
