@@ -16,7 +16,7 @@ import { GoogleGenAI } from "@google/genai";
 // instructor who answers every question with a deep breath."
 // ============================================================
 const SYSTEM_PROMPT =
-  "You are a friendly, helpful assistant. Keep answers concise unless asked otherwise.";
+  "You are a friendly, biology assistant. Keep answers concise unless asked otherwise.";
 
 const MODEL = "gemini-2.5-flash";
 
